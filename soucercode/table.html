@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="table.css">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="form-control">
+        <table id="table">
+           
+      <tr>
+    <th>Nome Da Obra</th>
+    <th>Autor</th>
+    <th>Ano da obra</th>
+    <th>Periodo da obra</th>
+    <th>Tipo da obra</th>
+    <th>Detalhes</th>
+    <th>Deletar</th>
+    <th></th>
+     </tr>
+     <tr>
+    <td>obraBonita</td>
+    <td>mestre splinter</td>
+    <td>1950</td>
+    <td>dC</td>
+    <td>quadro</td>
+    <th>Detalhes</th>
+    <td>Deletar</td>
+     </tr>    
+     <tr>
+    <td>Carros e coisa</td>
+    <td>mestre dos magos</td>
+    <td>1980</td>
+    <td>aC</td>
+    <td>quadro</td>
+    <td>obrafeia</td>
+    <td>Deletar</td>
+     </tr>
+     
+
+        </table>
+        
+     </div>
+   <a href="index.html">
+   <button>Reset</button>
+</a>
+<script>
+ var table=document.getElementById("table");
+ var line= table.insertRow(1);
+ 
+var queryString = decodeURIComponent(window.location.search);
+queryString = queryString.substring(1);
+
+var queries = queryString.split("&");
+for (var i = 0; i < queries.length; i++)
+{
+    cell=line.insertCell(i);
+    cell.innerHTML= queries[i].split("=")[1];
+  //document.write(queries[i] + "<br>");
+}
+
+
+ 
+</script> 
+<script>
+    var index, table= document.getElementById('table');
+    for(var i = 0 ; i< table.rows.length; i++){
+        table.rows[i].cells[6].onclick=function(){
+            index= this.parentElement.rowIndex;
+            table.deleteRow(index);
+            
+        };
+    }
+</script>
+    </body>
+</html>

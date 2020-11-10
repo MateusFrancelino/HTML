@@ -1,0 +1,34 @@
+table, th, td {
+  border: 1px solid black;
+}
+
+table {
+  border-spacing: 1px;
+  border-collapse: collapse;
+  
+  background: #ccccff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+table td, table th {
+  padding-left: 30px;
+}
+
+table tbody tr {
+  height: 25px;
+}
+
+table td, table th {
+  text-align: left;
+}
+tbody tr {
+  
+  font-size: 15px;
+  color: #003333;
+  line-height: 1.2;
+  
+}
